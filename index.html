@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <form id='form'>
+        <input type="text" id="username" placeholder="username" >
+        <input type="email" id="email" placeholder="email">
+        <input type="phonenumber" id="phonenumber" placeholder="phonenumber" >
+        <input type="submit" value="send">
+    </form>
+</body>
+<script>
+var form = document.getElementById('form')
+    form.addEventListener('submit',function(event){
+        event.preventDefault();
+
+        var username=document.getElementById('username').value
+        localStorage.setItem('username',username);
+
+        var email=document.getElementById('email').value
+        localStorage.setItem('email',email);
+    })
+        </script>
+
+</html>
